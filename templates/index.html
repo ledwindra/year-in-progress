@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #progress {
+                margin:auto;
+                text-align:center;
+                vertical-align:middle;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;
+                font-size: 75px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #leap-year {
+                margin:auto;
+                text-align:center;
+                vertical-align:middle;
+                position: fixed;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size:25px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+        <title>
+            {{ year }} in progress
+        </title>
+    </head>
+    <body>
+        {% if leap_year %}
+            <p id="progress">{{ progress }}</p>
+            <p id="leap-year">Note: {{ year}} is a leap year</p>
+        {% else %}
+            <p id="progress">{{ progress }}</p>
+        {% endif %}
+    </body>
+</html>
